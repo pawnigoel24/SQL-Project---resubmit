@@ -1,0 +1,41 @@
+USE ProjectDB;
+
+-- For Feed1
+CREATE TABLE Feed1_unique AS
+SELECT DISTINCT *
+FROM Feed1;
+
+TRUNCATE TABLE Feed1;
+
+INSERT INTO Feed1
+SELECT * FROM Feed1_unique;
+
+DROP TABLE Feed1_unique;
+
+
+-- For Feed2
+CREATE TABLE Feed2_unique AS
+SELECT DISTINCT *
+FROM Feed2;
+
+TRUNCATE TABLE Feed2;
+
+INSERT INTO Feed2
+SELECT * FROM Feed2_unique;
+
+DROP TABLE Feed2_unique;
+
+
+-- For Feed3
+CREATE TABLE Feed3_unique AS
+SELECT DISTINCT *
+FROM Feed3;
+
+TRUNCATE TABLE Feed3;
+
+INSERT INTO Feed3
+SELECT * FROM Feed3_unique;
+
+DROP TABLE Feed3_unique;
+
+
